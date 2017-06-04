@@ -14,3 +14,10 @@ If start is greater than end '() is returned."
   (if (> start end)
       '()
     (cons start (range (inc start) end))))
+
+(let ((nums (range ?A ?Z)))
+  (mapcar 'byte-to-string nums))
+("A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" ...)
+
+;; I can make the list of numbers, and convert them to the
+;; alphabet. Now figure out how to create an infinitely cycling lazy sequence.
