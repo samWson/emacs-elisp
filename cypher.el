@@ -13,6 +13,9 @@ Uses the global constants ascii-A and ascii-Z."
   (let ((nums (number-sequence ascii-A ascii-Z)))
     (mapcar 'byte-to-string nums)))
 
-;; I can make the list of numbers, and convert them to the
-;; alphabet. Now figure out how to create an infinitely cycling lazy sequence.
+(setq double-alphabet (append (alphabet) (alphabet)))
 
+;; I can make the list of numbers, and convert them to the alphabet. I
+;; can create a double alphabet. Now to use the double alphabet to
+;; create a tabula recta. I will use a Dictionary/Hash map like
+;; structure.
